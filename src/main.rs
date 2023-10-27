@@ -1,27 +1,37 @@
-mod nav;
+mod components;
+mod pages;
 
 use leptos::*;
-use nav::Navbar;
+use leptos_router::{Router, Routes, Route};
+use components::nav::Navbar;
+use components::privacy::PrivacyPolicy;
+use pages::page404::NotFound;
 
 fn main() {
-    mount_to_body(App)
+    leptos::mount_to_body(App);
+}
+
+#[component]
+fn Test() -> impl IntoView {
+    view! {
+        <Navbar/>
+        <NotFound/>
+    }
 }
 
 #[component]
 fn App() -> impl IntoView {
-    let (count, set_count) = create_signal(0);
-
     view! {
-        <Navbar/>
-        <button
-        on:click=move |_|{set_count.update(|n| *n += 1);}>
-        "Click me, Zozo: "
-        </button>
-        " "<strong class=("red", move || count()%2 == 0)>{count}</strong>
-        <br/>
-        <button on:click=move |_|(set_count(0))>
-        "Reset"
-        </button>
+        <Router>
+            <Navbar/>
+            <main>
+            <Routes>
+                <Route path="" view=|| view!{<h1>"Hello"</h1>} />
+                <Route path="privacy" view=PrivacyPolicy />
+                <Route path="*any" view=NotFound />
+            </Routes>
+            </main>
+        </Router>
     }
 }
 
