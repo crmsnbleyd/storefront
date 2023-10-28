@@ -4,8 +4,8 @@ mod pages;
 use leptos::*;
 use leptos_router::{Router, Routes, Route};
 use components::nav::Navbar;
-use components::privacy::PrivacyPolicy;
 use pages::page404::NotFound;
+use pages::privacy::PrivacyPolicy;
 
 fn main() {
     leptos::mount_to_body(App);

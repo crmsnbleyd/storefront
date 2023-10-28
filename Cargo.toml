@@ -10,4 +10,4 @@ license = "AGPL-3.0-or-later"
 
 [dependencies]
 leptos = { version = "0.5.2", features = ["csr", "nightly"] }
-leptos_router = "0.5.2"
+leptos_router = { version = "0.5.2", features = ["csr", "nightly"] }
