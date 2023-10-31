@@ -1,0 +1,22 @@
+body {
+    min-height:  100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
+    color: whitesmoke;
+    background-color: darkblue;
+}
+
+.copyright-notice{
+    margin: auto;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-links{
+    margin: auto;
+    text-align: center;
+}

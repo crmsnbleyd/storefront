@@ -1,0 +1,10 @@
+#+TITLE: Implementation details for skeleton
+
+- djula for templating
+- ningle for everything else (though I believe it is HTTP/1.1)
+
+* TODO items to add
+- [[https://github.com/mroderick/PubSubJS][Vanilla JS Pub/Sub for reactivity]]
+- Aria-current to current item in navbar
+
+* WIKI

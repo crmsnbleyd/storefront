@@ -1,0 +1,10 @@
+<li class="nav-item">
+  <a 
+    {% if page-name == nav-item-name %}
+    class="nav-link active"
+    aria-current="page"
+    {% else %}
+    class="nav-link" 
+    {% endif %}
+    href="{{ nav-item-link }}">{{ nav-item-name }}</a>
+</li>
