@@ -1,0 +1,5 @@
+** What is this repository?
+
+This the source code of an as-of-yet unnamed storefront for Indian Queer Artists.
+
+It is currently open-sourced to invite collaboration and for transparency once the website is up. This might change in the future.
