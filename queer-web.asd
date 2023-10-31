@@ -1,8 +1,12 @@
 (asdf:defsystem #:queer-web
-  :depends-on (#:alexandria
-	       #:clack #:ningle
-	       #:djula #:trivia
-         #:postmodern)
+  :depends-on
+  (#:alexandria
+   #:clack                   ;; hunchentoot requires libcrypto from openssl
+   #:clack-errors
+   #:ningle
+   #:djula
+   #:trivia
+   #:postmodern)
   :components
   ((:file "package")
    (:file "templates-compile" :depends-on ("package"))

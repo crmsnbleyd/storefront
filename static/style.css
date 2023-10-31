@@ -9,10 +9,20 @@ footer{
     color: whitesmoke;
     background-color: darkblue;
 }
+footer a{
+    color: whitesmoke;
+}
+footer a:hover{
+    color: grey;
+}
 
 .copyright-notice{
     margin: auto;
+}
+.copyright-notice > .col{
+    margin: auto;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
 }
 
