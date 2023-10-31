@@ -1,11 +1,12 @@
 use leptos::*;
+use leptos_router::*;
 
 #[component]
 pub fn Navbar() -> impl IntoView {
     view! {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">"The Queer Store"</a>
+        <A class="navbar-brand" href="/">"The Queer Store"</A>
         <button class="navbar-toggler"
         type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -16,10 +17,10 @@ pub fn Navbar() -> impl IntoView {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <A class="nav-link" href="/">"Home"</A>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">"Link"</a>
+        <A class="nav-link" href="/privacy">"Privacy Policy"</A>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
