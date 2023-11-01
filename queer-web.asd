@@ -6,11 +6,12 @@
    #:ningle
    #:djula
    #:trivia
-   #:postmodern)
+   #:mito)
   :components
   ((:file "package")
    (:file "templates-compile" :depends-on ("package"))
-   (:file "routes" :depends-on ("templates-compile"))
+   (:file "models" :depends-on ("package"))
+   (:file "routes" :depends-on ("models" "templates-compile"))
    (:file "main" :depends-on ("routes"))))
 
 (asdf:defsystem #:queer-web/tests

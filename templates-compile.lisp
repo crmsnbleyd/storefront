@@ -5,6 +5,9 @@
 (defparameter +entrypoint+
   (djula:compile-template* "index.html"))
 
+(defparameter +artists+
+  (djula:compile-template* "artists.html"))
+
 (defparameter +privacy-policy+
   (djula:compile-template* "privacy.html"))
 

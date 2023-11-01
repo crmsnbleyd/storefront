@@ -1,4 +1,6 @@
 (defpackage queer-web
-  (:use :cl))
+  (:use :cl)
+  (:export :start
+	   :stop))
 
 (in-package queer-web)
