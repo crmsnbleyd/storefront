@@ -33,5 +33,14 @@
 (mito:deftable product ()
   ((name :col-type (:varchar 64))
    (artist :col-type artist)    ;; use objects of class artist instead of id to fetch
-   (price :col-type :integer :documentation "Price in Rs, never fractional")
+   (price :col-type :integer :documentation "Price in ₨, never fractional")
    (image-url :col-type (or (:varchar 128) :null))))
+
+(defun get-table-range (table start &key (end -1) (sort-predicate :id))
+  "Get from TABLE row START to row END (inclusive)
+when ordered by some criteria SORT-PREDICATE.
+If END is not passed, get until last row."
+  (mito:select-dao table
+    (sxql:order-by sort-predicate)
+    (sxql:offset start)
+    (sxql:limit end)))
