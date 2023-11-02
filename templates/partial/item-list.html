@@ -2,7 +2,10 @@
   {% for item in item-list %}
   <a class="card">
     <img class="card-img-top" alt="{{ item.name }}" src="{{ item.image_url }}"/>
-    <div class="card-body"></div>
+    <div class="card-body">
+      Name: {{ item.name }} <br/>
+      Email: {{ item.email }}
+    </div>
   </a>
   {% endfor %}
 </div>

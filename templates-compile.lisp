@@ -13,3 +13,6 @@
 
 (defparameter +404+
   (djula:compile-template* "404.html"))
+
+(defparameter +item-list-test+
+  (djula:compile-template* "list-test.html"))

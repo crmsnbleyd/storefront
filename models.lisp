@@ -26,7 +26,7 @@
   (:documentation "Abstract base class for, etc, `artist'."))
 
 (mito:deftable artist (person)
-  ((profile-image-url :col-type (or (:varchar 128) :null)))
+  ((image-url :col-type (or (:varchar 128) :null)))
   (:unique-keys email)
   (:documentation "Creator of queer-web products."))
 
@@ -48,3 +48,4 @@ If END is not passed, get until last row."
        ((= -1 end) end)
        ((< end start) 0)
        (t (1+ (- end start)))))))
+
