@@ -16,7 +16,7 @@
      (declare (ignore props))
      (djula:render-template* template nil :title title :page-name page-name))))
 
-(set-simple-route "/" +entrypoint+ :title "Hello" :page-name "Home")
+;; (set-simple-route "/" +entrypoint+ :title "Hello" :page-name "Home")
 
 (set-simple-route "/artists" +artists+ :title "Arists" :page-name "Artists")
 

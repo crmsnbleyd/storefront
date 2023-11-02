@@ -43,4 +43,8 @@ If END is not passed, get until last row."
   (mito:select-dao table
     (sxql:order-by sort-predicate)
     (sxql:offset start)
-    (sxql:limit end)))
+    (sxql:limit
+     (cond
+       ((= -1 end) end)
+       ((< end start) 0)
+       (t (1+ (- end start)))))))

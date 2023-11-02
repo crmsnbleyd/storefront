@@ -1,4 +1,9 @@
+:root{
+    --base-text-color: black;
+}
+
 body {
+    color: var(--base-text-color);
     min-height:  100vh;
     display: flex;
     flex-direction: column;
@@ -14,6 +19,11 @@ footer a{
 }
 footer a:hover{
     color: grey;
+}
+
+a.card{
+    color: var(--base-text-color);
+    text-decoration: none;
 }
 
 .copyright-notice{
